@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-black text-white">
-    <div class=" px-3.5 md:px-24 ">
+    <div id="menu" class=" px-3.5 md:px-24 ">
         <nav class="flex justify-between  py-4">
             <div>
-                <h1 class="font-bold text-xl text-[#C7C7C7]">DABA  GUEYE</h1>
+                <h1 class="font-bold text-xl text-[#D3E97A]">DABA  GUEYE</h1>
             </div>
             <div class="hidden md:block">
                 <ul class="flex gap-32 text-xl ">
@@ -21,7 +21,7 @@
                     <li class="  hover:scale-105 hover:text-[#D3E97A] "><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="md:hidden text-[#C7C7C7] hover:scale-105 ">
+            <div id="bouton-menu" class="md:hidden text-[#C7C7C7] hover:scale-105 ">
                 <i class="fa-solid fa-bars fa-3x"></i>
             </div>
         </nav>
@@ -77,7 +77,7 @@
             <div class=" md:w-1/2 md:h-96">
                 <h1 class=" font-bold text-3xl mb-4"> ENTRONS EN CONTACT</h1>
                 <P class=" text-[#C7C7C7] mb-2">Dites moi bonjour <a href="#" class=" border-b border-b-[#D3E97A] hover:text-[#D3E97A] " > 11gueyedaba10@gmail.com </a></P>
-                <p class=" text-[#C7C7C7] mb-8"> Pour en savoir plus, ...<a href="CV_Daba_Gueye.pdf" download class=" border-b border-b-[#D3E97A] hover:text-[#D3E97A]">Télécharger mon CV</a> </p>
+                <p class=" text-[#C7C7C7] mb-8"> Pour en savoir plus, ...<a href="CVa_Daba_Gueye.pdf" download class=" border-b border-b-[#D3E97A] hover:text-[#D3E97A]">Télécharger mon CV</a> </p>
                 <div class=" text-[#D3E97A] flex justify-between w-60 mb-10">
                     <i class=" hover:scale-105 fa-brands fa-linkedin-in fa-2x"></i>
                     <i class=" hover:scale-105 fa-brands fa-github fa-2x"></i>
@@ -99,5 +99,21 @@
         </div>
         <p class="mt-8 text-[#C7C7C7] md:w-1/2 md:-mt-8"> &copy; 2026 Daba Gueye. Tous droits réservés.</p>
     </div>
+    <script src="src/script.js">
+        const boutonMenu = document.querySelector('#bouton-menu');
+const menu = document.querySelector('#menu');
+
+boutonMenu.addEventListener('click', function() {
+    menu.classList.toggle("hidden");
+
+    const iconMenu = document.querySelector('#bouton-menu i');
+
+    if (menu.classList.contains("hidden")) {
+        iconMenu.className = "fa-solid fa-bars fa-3x";
+    } else {
+        iconMenu.className = "fa-solid fa-xmark fa-3x";
+    }
+});
+    </script>
 </body>
 </html>
